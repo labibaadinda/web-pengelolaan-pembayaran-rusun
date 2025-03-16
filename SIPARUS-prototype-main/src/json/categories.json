@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Sawah Besar Tower 4",
+      "subtitle": "44"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Sawah Besar Tower 3",
+      "subtitle": "44"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Sawah Besar",
+      "subtitle": "84"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Kudu Blok H-I",
+      "subtitle": "115"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Kudu Blok G",
+      "subtitle": "70"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Kudu Blok A-F",
+      "subtitle": "586"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Kaligawe Blok A-G",
+      "subtitle": "675"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Karangroto Blok A-D",
+      "subtitle": "388"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Bandarharjo Blok A-B",
+      "subtitle": "177"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Karangroto C Lama",
+      "subtitle": "104"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Rumah Deret Karangroto Blok B",
+      "subtitle": "24"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Rumah Deret Karangroto Blok A",
+      "subtitle": "26"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Bandarharjo Lama",
+      "subtitle": "30"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Plamongan Sari",
+      "subtitle": "208"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Gasemsari",
+      "subtitle": "20"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Pondok Boro",
+      "subtitle": "96"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Pekerja Jerakah",
+      "subtitle": "104"
+    },
+    {
+      "icon": "/icons/buildings.svg",
+      "title": "Pekunden",
+      "subtitle": "39"
+    }
+  ]
+}
