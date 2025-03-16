@@ -35,14 +35,6 @@ siparus-project/
 ├── LaporanPKL_LabibaAdindaZaahwana.pdf   # File laporan PKL
 └── README.md   # Dokumentasi
 ```
-```
-siparus-project/
-├── admin-dashboard/   # Dashboard admin (Laravel 11 + Filament)
-├── user-portal/       # Portal user calon penghuni (Next.js 14)
-├── api-backend/       # Backend RESTful API Laravel 11
-├── database/          # Struktur database dan migrasi
-└── README.md          # Dokumentasi
-```
 
 ## 🌐 URL Aplikasi
 Saat aplikasi dijalankan dilokal URL nya, yaitu : 
