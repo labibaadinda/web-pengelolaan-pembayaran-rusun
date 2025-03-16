@@ -25,7 +25,6 @@ SIPARUS (Sistem Informasi Pembayaran dan Manajemen Invoice Rumah Susun) merupaka
 
 ### 🔹 Integrasi WhatsApp untuk Konfirmasi Pembayaran
 - Setelah calon penghuni melakukan pembayaran, mereka dapat mengunggah bukti pembayaran melalui WhatsApp ke admin.
-- Sistem akan mengirimkan notifikasi otomatis ke WhatsApp admin dengan informasi transaksi.
 - Admin dapat memverifikasi pembayaran dan memperbarui status transaksi di dashboard.
 
 ## 📂 Struktur Repository
