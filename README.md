@@ -1,7 +1,7 @@
 # SIPARUS
 
 ## 📌 **Deskripsi Proyek**
-**SIPARUS** adalah platform berbasis web untuk mengelola pembayaran sewa dan invoice penghuni Rumah Susun Kota Semarang, menggunakan teknologi **Laravel 11** (Backend), **Next.js 14** (Frontend), dan **MySQL**. Sistem ini terdiri dari dua bagian utama:
+**SIPARUS** adalah platform berbasis web untuk mengelola pembayaran sewa dan invoice calon penghuni Rumah Susun Kota Semarang, menggunakan teknologi **Laravel 11** (Backend), **Next.js 14** (Frontend), dan **MySQL**. Sistem ini terdiri dari dua bagian utama:
 1. **Website Admin**: Backend yang dikelola dengan Laravel dan Filament.
 2. **Website Calon Penghuni**: Frontend yang dibangun dengan Next.js, berkomunikasi dengan API Laravel.
 
@@ -9,9 +9,9 @@
 ## 📸 **Tampilan Dashboard**
 
 ### **Dashboard Calon Penghuni**
-Berikut adalah tampilan **Dashboard Penghuni**:
+Berikut adalah tampilan **Dashboard Calon Penghuni**:
 
-![Dashboard Penghuni](images/dashboard_user.png)
+![Dashboard Calon Penghuni](images/dashboard_user.png)
 
 ### **Dashboard Admin**
 Berikut adalah tampilan **Dashboard Admin**:
@@ -88,9 +88,9 @@ Jika Anda ingin menguji API, Anda dapat menggunakan **Postman** untuk mengirimka
 
 ---
 
-## 🌐 **API untuk Admin dan Penghuni**
+## 🌐 **API untuk Admin dan Calon Penghuni**
 - **Website Admin**: [http://localhost:8000/admin](http://localhost:8000/admin)
-- **Website Penghuni**: [http://localhost:3000](http://localhost:3000)
+- **Website Calon Penghuni**: [http://localhost:3000](http://localhost:3000)
 
 API dikembangkan untuk menangani manajemen rusun, transaksi, dan konfirmasi pembayaran melalui WhatsApp.
 
