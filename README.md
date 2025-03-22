@@ -8,7 +8,7 @@
 ---
 ## 📸 **Tampilan Dashboard**
 
-### **Dashboard Penghuni**
+### **Dashboard Calon Penghuni**
 Berikut adalah tampilan **Dashboard Penghuni**:
 
 ![Dashboard Penghuni](images/dashboard_user.png)
@@ -123,8 +123,7 @@ siparus-project/
 | **Frontend User**    | Next.js 14                             |
 | **Backend & Admin**  | Laravel 11, Filament PHP               |
 | **Database**         | MySQL                                  |
-| **Deployment Tools** | Git, GitHub, Composer, NPM             |
-| **Pengujian**        | Postman (Black Box Testing)            |
+| **Pengujian**        | Postman (Black Box dan White Box Testing)            |
 
 ---
 
