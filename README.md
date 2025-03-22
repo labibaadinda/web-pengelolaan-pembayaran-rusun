@@ -1,111 +1,136 @@
 # SIPARUS
 
-## 📌 Deskripsi Proyek
-SIPARUS (Sistem Informasi Pembayaran dan Manajemen Invoice Rumah Susun) merupakan platform terintegrasi berbasis web yang dikembangkan untuk membantu pengelolaan pembayaran sewa serta invoice penghuni Rumah Susun Kota Semarang secara efisien dan transparan. Aplikasi ini terdiri dari aplikasi admin menggunakan Laravel 11 dengan Filament, aplikasi calon penghuni menggunakan Next.js 14, dan keduanya berkomunikasi melalui RESTful API berbasis Laravel 11.
+## 📌 **Deskripsi Proyek**
+**SIPARUS** adalah platform berbasis web untuk mengelola pembayaran sewa dan invoice penghuni Rumah Susun Kota Semarang, menggunakan teknologi **Laravel 11** (Backend), **Next.js 14** (Frontend), dan **MySQL**. Sistem ini terdiri dari dua bagian utama:
+1. **Website Admin**: Backend yang dikelola dengan Laravel dan Filament.
+2. **Website Penghuni**: Frontend yang dibangun dengan Next.js, berkomunikasi dengan API Laravel.
 
-📂 **[Repository GitHub Proyek](https://github.com/labibaadinda/Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang)**
+---
+## 📸 **Tampilan Dashboard**
 
-## 🚀 Fitur Utama
+### **Dashboard Penghuni**
+Berikut adalah tampilan **Dashboard Penghuni**:
 
-### 🔹 Website Admin
-- **Teknologi:** Laravel 11, Filament PHP, MySQL
-- **Fitur:**
-  - CRUD data rusun
-  - Manajemen transaksi (verifikasi, hapus, update)
-  - Dashboard interaktif untuk pemantauan transaksi dan pengelolaan data penghuni
+![Dashboard Penghuni](images/dashboard_user.png)
 
-### 🔹 Website Penghuni
-- **Teknologi:** Next.js 14 (frontend), Laravel 11 (backend API), MySQL
-- **Fitur:**
-  - Pendaftaran dan login user
-  - Melihat daftar dan detail rusun
-  - Pemesanan kamar secara online
-  - Upload bukti pembayaran via WhatsApp
-  - Melihat status transaksi dan booking
+### **Dashboard Admin**
+Berikut adalah tampilan **Dashboard Admin**:
 
-### 🔹 Integrasi WhatsApp untuk Konfirmasi Pembayaran
-- Setelah calon penghuni melakukan pembayaran, mereka dapat mengunggah bukti pembayaran melalui WhatsApp ke admin.
-- Admin dapat memverifikasi pembayaran dan memperbarui status transaksi di dashboard.
+![Dashboard Admin](images/dashboard_admin.png)
 
-## 📂 Struktur Repository
+## 🛠 **Cara Setup SIPARUS**
+
+### **1. Setup Backend (Laravel 11)**
+Langkah pertama adalah menyiapkan **backend API** yang dibangun menggunakan **Laravel 11**. Berikut adalah langkah-langkahnya:
+
+```bash
+# Clone repository proyek
+git clone https://github.com/labibaadinda/Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang.git
+
+# Masuk ke direktori backend
+cd SIPARUS-backend
+
+# Install dependensi menggunakan Composer
+composer install
+
+# Salin file konfigurasi .env
+cp .env.example .env
+
+# Edit file .env untuk menyesuaikan konfigurasi database:
+# - DB_DATABASE=nama_database
+# - DB_USERNAME=nama_user_mysql
+# - DB_PASSWORD=password_mysql
+
+# Generate aplikasi key Laravel
+php artisan key:generate
+
+# Lakukan migrasi database
+php artisan migrate
+
+# Jalankan server Laravel
+php artisan serve
 ```
-siparus-project/
-├── SIPARUS-backend/   # Backend API Laravel 11
-├── SIPARUS-prototype-main/   # Frontend Next.js 14
-├── LaporanPKL_LabibaAdindaZaahwana.pdf   # File laporan PKL
-└── README.md   # Dokumentasi
+
+Setelah langkah-langkah di atas, backend API akan berjalan pada **http://localhost:8000**.
+
+### **2. Setup Frontend (Next.js 14)**
+Untuk menyiapkan bagian frontend yang menggunakan **Next.js 14**, ikuti langkah-langkah berikut:
+
+```bash
+# Masuk ke folder frontend
+cd SIPARUS-prototype-main
+
+# Install dependensi menggunakan npm
+npm install
+
+# Jalankan aplikasi Next.js
+npm run dev
 ```
 
-## 🌐 URL Aplikasi
-Saat aplikasi dijalankan dilokal URL nya, yaitu : 
+Frontend akan berjalan di **http://localhost:3000**.
+
+### **3. Menghubungkan Backend dan Frontend**
+Agar frontend dapat berkomunikasi dengan backend, Anda perlu memastikan bahwa API yang disediakan oleh Laravel dapat diakses oleh frontend. Anda bisa menggunakan **fetch API** atau **Axios** di Next.js untuk mengakses endpoint dari Laravel.
+
+Contoh endpoint API yang dapat diakses:
+- **Login**: `POST /api/login`
+- **Daftar Rusun**: `GET /api/rusun`
+- **Detail Rusun**: `GET /api/rusun/{id}`
+
+---
+
+## 🔎 **Pengujian API dengan Postman**
+Jika Anda ingin menguji API, Anda dapat menggunakan **Postman** untuk mengirimkan permintaan ke endpoint API. Berikut adalah langkah-langkahnya:
+
+1. **Unduh dan instal Postman** dari [sini](https://www.postman.com/).
+2. **Import koleksi API** yang disediakan (jika ada).
+3. Gunakan URL endpoint **`http://localhost:8000/api/`** untuk mengakses berbagai resource.
+
+---
+
+## 🌐 **API untuk Admin dan Penghuni**
 - **Website Admin**: [http://localhost:8000/admin](http://localhost:8000/admin)
 - **Website Penghuni**: [http://localhost:3000](http://localhost:3000)
 
-## 🌐 REST API
-API dikembangkan menggunakan Laravel 11 sebagai RESTful API dengan autentikasi token untuk integrasi frontend Next.js. API ini mengelola data transaksi, informasi rusun, dan pengguna.
+API dikembangkan untuk menangani manajemen rusun, transaksi, dan konfirmasi pembayaran melalui WhatsApp.
 
-### 🛠 Menjalankan Backend API Laravel
+---
 
-Ikuti langkah-langkah berikut:
+## 📂 **Struktur Repository**
+```
+siparus-project/
+├── SIPARUS-backend/   
+├── SIPARUS-prototype-main/   
+├── images
+│   ├── dashboard_user.png
+│   ├── dashboard_admin.png
+├── LaporanPKL_LabibaAdindaZaahwana.pdf   
+├── Presentasi_PKL.pdf
+└── README.md
 
-```bash
-# Clone repository
-git clone https://github.com/labibaadinda/Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang.git
-
-cd SIPARUS-backend
-
-# Instal dependensi
-composer install
-
-# Salin konfigurasi
-cp .env.example .env
-
-# Generate key Laravel
-php artisan key:generate
-
-# Konfigurasi Database
-# - Edit file .env, sesuaikan DB_DATABASE, DB_USERNAME, DB_PASSWORD
-
-# Migrasi database
-php artisan migrate
-
-# Jalankan Server
-php artisan serve
-
-# API berjalan pada http://localhost:8000
 ```
 
-### 🔎 Pengujian API dengan Postman
+---
 
-- **Unduh dan instal [Postman](https://www.postman.com/)**
-- Import koleksi API dari file `api_collection.json` yang disediakan dalam folder dokumentasi API (opsional jika ada)
-- Gunakan URL endpoint `http://localhost:8000/api/...` untuk mengakses resource.
+## 🔗 **Tautan Repository**
+- **[GitHub Repository](https://github.com/labibaadinda/Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang)**
 
-Contoh endpoint API:
-- Login: `POST /api/login`
-- Daftar rusun: `GET /api/rusun`
-- Detail rusun: `GET /api/rusun/{id}`
+---
 
-## 🔎 Cara Menghubungkan Frontend dengan Backend API
-
-Agar frontend Next.js bisa berkomunikasi dengan backend Laravel melalui API, gunakan metode fetch API atau Axios.
-
-
-
-## 🔗 Tautan Repository
-- [GitHub Repository](https://github.com/labibaadinda/Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang)
-
-## 🔗 Teknologi dan Tools
+## 📝 **Teknologi dan Tools**
 | Komponen             | Teknologi                              |
 |----------------------|----------------------------------------|
 | **Frontend User**    | Next.js 14                             |
 | **Backend & Admin**  | Laravel 11, Filament PHP               |
 | **Database**         | MySQL                                  |
 | **Deployment Tools** | Git, GitHub, Composer, NPM             |
-| **Pengujian**        | Black Box Testing                      |
+| **Pengujian**        | Postman (Black Box Testing)            |
 
-## 📖 Dokumentasi API
-Dokumentasi lengkap RESTful API tersedia pada Postman collection.
+---
+
+## 📖 **Dokumentasi API**
+Dokumentasi API RESTful dapat diakses melalui Postman collection untuk pengujian lebih lanjut.
+
 
 ## 👥 Kontributor
 - **Labiba Adinda Zahwana** - Universitas Diponegoro
