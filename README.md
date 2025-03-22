@@ -3,7 +3,7 @@
 ## 📌 **Deskripsi Proyek**
 **SIPARUS** adalah platform berbasis web untuk mengelola pembayaran sewa dan invoice penghuni Rumah Susun Kota Semarang, menggunakan teknologi **Laravel 11** (Backend), **Next.js 14** (Frontend), dan **MySQL**. Sistem ini terdiri dari dua bagian utama:
 1. **Website Admin**: Backend yang dikelola dengan Laravel dan Filament.
-2. **Website Penghuni**: Frontend yang dibangun dengan Next.js, berkomunikasi dengan API Laravel.
+2. **Website Calon Penghuni**: Frontend yang dibangun dengan Next.js, berkomunikasi dengan API Laravel.
 
 ---
 ## 📸 **Tampilan Dashboard**
