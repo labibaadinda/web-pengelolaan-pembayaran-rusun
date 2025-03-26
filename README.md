@@ -70,7 +70,7 @@ npm run dev
 Frontend akan berjalan di **http://localhost:3000**.
 
 ### **3. Menghubungkan Backend dan Frontend**
-Agar frontend dapat berkomunikasi dengan backend, Anda perlu memastikan bahwa API yang disediakan oleh Laravel dapat diakses oleh frontend. Anda bisa menggunakan **fetch API** atau **Axios** di Next.js untuk mengakses endpoint dari Laravel.
+Agar frontend dapat berkomunikasi dengan backend, perlu memastikan bahwa API yang disediakan oleh Laravel dapat diakses oleh frontend. Bisa menggunakan **fetch API** atau **Axios** di Next.js untuk mengakses endpoint dari Laravel.
 
 Contoh endpoint API yang dapat diakses:
 - **Login**: `POST /api/login`
@@ -80,7 +80,7 @@ Contoh endpoint API yang dapat diakses:
 ---
 
 ## 🔎 **Pengujian API dengan Postman**
-Jika Anda ingin menguji API, Anda dapat menggunakan **Postman** untuk mengirimkan permintaan ke endpoint API. Berikut adalah langkah-langkahnya:
+Jika ingin menguji API, dapat menggunakan **Postman** untuk mengirimkan permintaan ke endpoint API. Berikut adalah langkah-langkahnya:
 
 1. **Unduh dan instal Postman** dari [sini](https://www.postman.com/).
 2. **Import koleksi API** yang disediakan (jika ada).
@@ -106,7 +106,8 @@ siparus-project/
 │   ├── dashboard_admin.png
 ├── LaporanPKL_LabibaAdindaZaahwana.pdf   
 ├── Presentasi_PKL.pdf
-└── README.md
+├── README.md
+└── siparus.sql
 
 ```
 
