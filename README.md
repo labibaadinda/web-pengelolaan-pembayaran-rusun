@@ -98,7 +98,7 @@ API dikembangkan untuk menangani manajemen rusun, transaksi, dan konfirmasi pemb
 
 ## 📂 **Struktur Repository**
 ```
-siparus-project/
+Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang/
 ├── SIPARUS-backend/   
 ├── SIPARUS-prototype-main/   
 ├── images
@@ -132,8 +132,3 @@ siparus-project/
 Dokumentasi API RESTful dapat diakses melalui Postman collection untuk pengujian lebih lanjut.
 
 
-## 👥 Kontributor
-- **Labiba Adinda Zahwana** - Universitas Diponegoro
-
-## 📌 Lisensi
-© 2025 Labiba Adinda Zahwana - Universitas Diponegoro.
