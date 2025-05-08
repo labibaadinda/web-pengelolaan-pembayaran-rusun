@@ -124,7 +124,7 @@ Sistem-Informasi-Pembayaran-dan-Pengelolaan-Rusun-Kota-Semarang/
 | **Frontend User**    | Next.js 14                             |
 | **Backend & Admin**  | Laravel 11, Filament PHP               |
 | **Database**         | MySQL                                  |
-| **Pengujian**        | Postman (Black Box dan White Box Testing)            |
+| **Pengujian**        | Postman (Black Box Testing)            |
 
 ---
 
