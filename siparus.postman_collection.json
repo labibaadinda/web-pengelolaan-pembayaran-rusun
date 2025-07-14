@@ -1,0 +1,1087 @@
+{
+	"info": {
+		"_postman_id": "6acdc9b7-fbb4-4da7-80f3-deee6d30f350",
+		"name": "siparus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37513393",
+		"_collection_link": "https://pkl222.postman.co/workspace/PKL-Workspace~2c758f78-6406-443b-863f-b79a3e3d51b5/collection/37513393-6acdc9b7-fbb4-4da7-80f3-deee6d30f350?action=share&source=collection_link&creator=37513393"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Labiba Adinda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "labibaadinda11@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 16:19:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Sign up successfully\",\n    \"data\": {\n        \"name\": \"Labiba Adinda\",\n        \"email\": \"labibaadinda11@gmail.com\",\n        \"updated_at\": \"2024-11-23T16:19:34.000000Z\",\n        \"created_at\": \"2024-11-23T16:19:34.000000Z\",\n        \"id\": 12,\n        \"token\": \"1|ZPnF9Eiosy3f60MB67ieJVfw5uuC98temuiYcrL1fe49e4b6\"\n    }\n}"
+						},
+						{
+							"name": "ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Labiba Adinda",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "labibaadinda11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 16:22:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The email has already been taken.\",\n    \"errors\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "akbarmbagaskara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Akbar12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/logout",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/logout",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 16:37:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=uKYijNeZwQ4iy45ww2fwQbxazb4cOLNSk6KyAFr0; expires=Sat, 23 Nov 2024 18:37:44 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logout successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "InfoLogin",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/user",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 16:50:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=pZNSzkIzlZL7ldt6JAU9wOw16rRKGR7HHgKZsoV5; expires=Sat, 23 Nov 2024 18:50:59 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Detail logged-in user\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Dr. Verner Ryan IV\",\n        \"email\": \"mireya.schinner@example.net\",\n        \"email_verified_at\": \"2024-11-23T15:05:50.000000Z\",\n        \"role\": \"admin\",\n        \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n        \"updated_at\": \"2024-11-23T15:05:50.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Listing",
+			"item": [
+				{
+					"name": "Get All Listings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/listing",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"listing"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/listing",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"listing"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 17:30:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=pZNSzkIzlZL7ldt6JAU9wOw16rRKGR7HHgKZsoV5; expires=Sat, 23 Nov 2024 19:30:09 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Get all listings\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 9,\n                \"title\": \"Ut Voluptas\",\n                \"slug\": \"ut-voluptas\",\n                \"description\": \"Non eos quibusdam tempore labore quis. Veritatis ut occaecati excepturi alias assumenda dolor. Quas aut autem nemo dolore ut. Quod deleniti nemo et cum. Est cum blanditiis quia saepe facere est. Ullam sed temporibus nostrum accusantium. Sit nihil et aperiam vero.\",\n                \"address\": \"63464 Lisette Mall\\nWest Francomouth, HI 69341\",\n                \"luas_kamar_m2\": 53,\n                \"kapasitas\": 64,\n                \"price\": 474762,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 2\n            },\n            {\n                \"id\": 15,\n                \"title\": \"Culpa Quia\",\n                \"slug\": \"culpa-quia\",\n                \"description\": \"Ea quod qui consequuntur amet. Id et sint excepturi soluta eveniet est et. Sed maxime nostrum consectetur saepe dolore omnis culpa. Qui sed possimus beatae quia impedit. Aut ipsum odio velit facilis perspiciatis et iusto.\",\n                \"address\": \"67777 Gulgowski Wall Apt. 902\\nEmardland, IN 54445\",\n                \"luas_kamar_m2\": 98,\n                \"kapasitas\": 93,\n                \"price\": 398938,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 2\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Quia Consectetur\",\n                \"slug\": \"quia-consectetur\",\n                \"description\": \"Minima autem occaecati est est. Esse quas nesciunt non nihil blanditiis reiciendis. Et eos sint dolore consequatur molestias. Saepe qui nemo nostrum labore sint. Et deleniti minima et ad fugit.\",\n                \"address\": \"86159 Godfrey Rue Apt. 451\\nSouth Birdie, OK 28678\",\n                \"luas_kamar_m2\": 99,\n                \"kapasitas\": 99,\n                \"price\": 509410,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Debitis Quisquam\",\n                \"slug\": \"debitis-quisquam\",\n                \"description\": \"Quasi amet maiores repudiandae eius occaecati vel. Recusandae libero ipsa omnis sint. Veritatis ut provident sit et accusamus laudantium aliquam. Suscipit expedita consectetur inventore.\",\n                \"address\": \"33384 Kertzmann Road\\nCummingsshire, SC 81920-0915\",\n                \"luas_kamar_m2\": 40,\n                \"kapasitas\": 86,\n                \"price\": 848202,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Delectus Quo\",\n                \"slug\": \"delectus-quo\",\n                \"description\": \"Similique voluptatem nam esse dignissimos eum. Inventore saepe beatae accusamus odit quos vitae sint. Unde voluptatum amet sunt cupiditate sint. Nulla dignissimos aut tempore facere qui sed dignissimos. Sed impedit sequi enim labore molestiae sed.\",\n                \"address\": \"602 Sophia Lock Suite 613\\nWest Tobyview, RI 92997-7500\",\n                \"luas_kamar_m2\": 18,\n                \"kapasitas\": 52,\n                \"price\": 448452,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 10,\n                \"title\": \"Dicta Voluptas\",\n                \"slug\": \"dicta-voluptas\",\n                \"description\": \"Repudiandae consectetur labore velit beatae. Eius repudiandae quae laborum hic. Necessitatibus quia aut molestiae et expedita sequi officia suscipit. Voluptatem itaque vel in consequatur.\",\n                \"address\": \"2640 Macejkovic Radial Apt. 350\\nNorth Jeremystad, MA 71747\",\n                \"luas_kamar_m2\": 98,\n                \"kapasitas\": 98,\n                \"price\": 458136,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 12,\n                \"title\": \"Et Et\",\n                \"slug\": \"et-et\",\n                \"description\": \"Occaecati et quia et temporibus exercitationem blanditiis. Enim corporis et voluptate quis accusamus doloribus voluptas. Dolorum minus inventore velit et in impedit. Facilis alias qui labore modi. Dicta provident saepe aut vitae culpa eaque. Repellat minima rerum aperiam sunt dolorem ut.\",\n                \"address\": \"97666 Euna Terrace Apt. 512\\nBaileyton, KS 14319-7455\",\n                \"luas_kamar_m2\": 86,\n                \"kapasitas\": 63,\n                \"price\": 103378,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 16,\n                \"title\": \"In Reprehenderit\",\n                \"slug\": \"in-reprehenderit\",\n                \"description\": \"Assumenda est enim magni totam molestiae nesciunt eum. Quo sed sit vitae molestias ad. Accusantium veritatis laudantium inventore et ut at. Sunt cumque possimus consequatur dignissimos amet.\",\n                \"address\": \"777 Schmeler Trace Apt. 671\\nHegmannberg, KS 68935\",\n                \"luas_kamar_m2\": 17,\n                \"kapasitas\": 90,\n                \"price\": 108487,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 1\n            },\n            {\n                \"id\": 1,\n                \"title\": \"Illum Est\",\n                \"slug\": \"illum-est\",\n                \"description\": \"Perferendis nam pariatur at impedit consequuntur dolore. Est nesciunt exercitationem cum natus quia deserunt placeat. Hic occaecati facilis eaque ab doloribus tempora. Assumenda velit praesentium laudantium hic asperiores autem. Aut beatae sit doloribus delectus illum ad. Pariatur culpa sequi labore quisquam.\",\n                \"address\": \"4953 Laverne Inlet\\nEast Kelvinberg, NM 54834\",\n                \"luas_kamar_m2\": 77,\n                \"kapasitas\": 79,\n                \"price\": 467529,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Rem Iusto\",\n                \"slug\": \"rem-iusto\",\n                \"description\": \"Libero odit pariatur tempora alias et quis. Necessitatibus architecto ea aut suscipit iste autem. Repellat possimus tempora itaque animi autem laudantium. Odit aut aut natus doloribus facere eos. Est distinctio eveniet architecto id.\",\n                \"address\": \"82181 Conn Village\\nMcGlynnville, TN 94129-6789\",\n                \"luas_kamar_m2\": 86,\n                \"kapasitas\": 72,\n                \"price\": 979072,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Aut Pariatur\",\n                \"slug\": \"aut-pariatur\",\n                \"description\": \"Et delectus tempora voluptates. Explicabo voluptate odit est et perspiciatis. Ipsa nihil aut est aspernatur eum quis. Autem ad quas aut iusto. Provident placeat veniam consequatur sapiente. Iure excepturi eveniet delectus aut vel occaecati. Recusandae ratione voluptates mollitia quis dolor voluptatem et.\",\n                \"address\": \"3101 Wilford Divide\\nEast Darrick, MD 60224\",\n                \"luas_kamar_m2\": 67,\n                \"kapasitas\": 89,\n                \"price\": 470717,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Magnam Incidunt\",\n                \"slug\": \"magnam-incidunt\",\n                \"description\": \"Accusantium hic itaque et. Error quas in aut fuga aliquid quidem qui. Consequuntur commodi enim occaecati. Quis rerum maiores voluptatem quidem rerum. Sint id quibusdam natus adipisci.\",\n                \"address\": \"941 Ryley Turnpike\\nWuckertburgh, WI 07951-3347\",\n                \"luas_kamar_m2\": 58,\n                \"kapasitas\": 74,\n                \"price\": 302918,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 8,\n                \"title\": \"Velit Repellat\",\n                \"slug\": \"velit-repellat\",\n                \"description\": \"Ea et aspernatur voluptate accusantium dolor nemo. Qui cumque autem tempora ducimus ad fugiat facilis aut. Aperiam molestiae exercitationem qui quia architecto quibusdam rerum omnis. Beatae qui ullam odio quod. Veniam mollitia non commodi quis.\",\n                \"address\": \"97602 Jones Locks Suite 104\\nLake Stanleyberg, SC 50416\",\n                \"luas_kamar_m2\": 28,\n                \"kapasitas\": 91,\n                \"price\": 881290,\n                \"attachments\": null,\n                \"full_support_available\": 1,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 11,\n                \"title\": \"Nam Assumenda\",\n                \"slug\": \"nam-assumenda\",\n                \"description\": \"Praesentium sapiente dicta enim vel. Eius ab et voluptas qui. Excepturi recusandae quo sed est. Ab ipsam blanditiis eius doloremque non incidunt sint.\",\n                \"address\": \"62213 Hackett Mountain Apt. 682\\nPort Sunnyview, OH 16900-1630\",\n                \"luas_kamar_m2\": 23,\n                \"kapasitas\": 55,\n                \"price\": 697980,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 0,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            },\n            {\n                \"id\": 13,\n                \"title\": \"Quo Ipsa\",\n                \"slug\": \"quo-ipsa\",\n                \"description\": \"Exercitationem et laudantium consequatur eos voluptatem rerum occaecati consequatur. Repudiandae asperiores nesciunt soluta aut enim magni ullam eaque. Praesentium quod omnis nostrum. Qui quidem atque et dignissimos qui repudiandae distinctio.\",\n                \"address\": \"8290 Mraz Stravenue Suite 460\\nWest Lottie, ID 24356-3627\",\n                \"luas_kamar_m2\": 35,\n                \"kapasitas\": 77,\n                \"price\": 393705,\n                \"attachments\": null,\n                \"full_support_available\": 0,\n                \"mini_canteen_available\": 1,\n                \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n                \"deleted_at\": null,\n                \"transaction_count\": 0\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/listing?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://localhost:8000/api/listing?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/listing?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/listing?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/listing?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost:8000/api/listing?page=2\",\n        \"path\": \"http://localhost:8000/api/listing\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 18\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Listing",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/listing/:slug",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"listing",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "illum-est"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/listing/:slug",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"listing",
+										":slug"
+									],
+									"variable": [
+										{
+											"key": "slug",
+											"value": "illum-est"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Nov 2024 17:35:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=pZNSzkIzlZL7ldt6JAU9wOw16rRKGR7HHgKZsoV5; expires=Sat, 23 Nov 2024 19:35:37 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Get detail listing\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Illum Est\",\n        \"slug\": \"illum-est\",\n        \"description\": \"Perferendis nam pariatur at impedit consequuntur dolore. Est nesciunt exercitationem cum natus quia deserunt placeat. Hic occaecati facilis eaque ab doloribus tempora. Assumenda velit praesentium laudantium hic asperiores autem. Aut beatae sit doloribus delectus illum ad. Pariatur culpa sequi labore quisquam.\",\n        \"address\": \"4953 Laverne Inlet\\nEast Kelvinberg, NM 54834\",\n        \"luas_kamar_m2\": 77,\n        \"kapasitas\": 79,\n        \"price\": 467529,\n        \"attachments\": null,\n        \"full_support_available\": 1,\n        \"mini_canteen_available\": 0,\n        \"created_at\": \"2024-11-23T15:05:50.000000Z\",\n        \"updated_at\": \"2024-11-23T15:05:50.000000Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Check Availability",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "listing_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-03-12",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-08-23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transaction/is-available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction",
+								"is-available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "listing_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-03-12",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-08-23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/transaction/is-available",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"transaction",
+								"is-available"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "listing_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2024-03-12",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2024-08-23",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/transaction",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Nov 2024 04:20:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=sICWntet4oIuPnaAEigtbeoDX5ORLJjgrGf1lAVF; expires=Sun, 24 Nov 2024 06:20:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Transaction created successfully\",\n    \"data\": {\n        \"start_date\": \"2024-03-12\",\n        \"end_date\": \"2024-08-23\",\n        \"listing_id\": \"3\",\n        \"price\": 782514,\n        \"total_bulan\": 5.354838709677419,\n        \"fee\": 419023.6258064516,\n        \"total_price\": 4609259.883870968,\n        \"user_id\": 12,\n        \"updated_at\": \"2024-11-24T04:20:25.000000Z\",\n        \"created_at\": \"2024-11-24T04:20:25.000000Z\",\n        \"id\": 11,\n        \"listing\": {\n            \"id\": 3,\n            \"title\": \"Id Magnam\",\n            \"slug\": \"id-magnam\",\n            \"description\": \"Ullam nisi inventore numquam dolorem fugiat beatae. Voluptatibus voluptas accusamus sit voluptas tenetur. Dolorum ex et iure excepturi reiciendis provident. Commodi sapiente delectus aut ipsam assumenda. Vero quia officia facilis quidem. Perferendis ad labore ipsam amet non.\",\n            \"address\": \"507 Hyatt Ridges\\nNorth Leaport, NJ 07010\",\n            \"luas_kamar_m2\": 17,\n            \"kapasitas\": 82,\n            \"price\": 782514,\n            \"attachments\": null,\n            \"full_support_available\": 0,\n            \"mini_canteen_available\": 1,\n            \"created_at\": \"2024-11-24T03:23:15.000000Z\",\n            \"updated_at\": \"2024-11-24T03:23:15.000000Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All My Transaction",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/transaction",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Nov 2024 04:25:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=sICWntet4oIuPnaAEigtbeoDX5ORLJjgrGf1lAVF; expires=Sun, 24 Nov 2024 06:25:54 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"List of transaction\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 11,\n                \"user_id\": 12,\n                \"listing_id\": 3,\n                \"start_date\": \"2024-03-12\",\n                \"end_date\": \"2024-08-23\",\n                \"price\": 782514,\n                \"total_bulan\": 5,\n                \"fee\": 419024,\n                \"total_price\": 4609260,\n                \"status\": \"waiting\",\n                \"created_at\": \"2024-11-24T04:20:25.000000Z\",\n                \"updated_at\": \"2024-11-24T04:20:25.000000Z\",\n                \"listing\": {\n                    \"id\": 3,\n                    \"title\": \"Id Magnam\",\n                    \"slug\": \"id-magnam\",\n                    \"description\": \"Ullam nisi inventore numquam dolorem fugiat beatae. Voluptatibus voluptas accusamus sit voluptas tenetur. Dolorum ex et iure excepturi reiciendis provident. Commodi sapiente delectus aut ipsam assumenda. Vero quia officia facilis quidem. Perferendis ad labore ipsam amet non.\",\n                    \"address\": \"507 Hyatt Ridges\\nNorth Leaport, NJ 07010\",\n                    \"luas_kamar_m2\": 17,\n                    \"kapasitas\": 82,\n                    \"price\": 782514,\n                    \"attachments\": null,\n                    \"full_support_available\": 0,\n                    \"mini_canteen_available\": 1,\n                    \"created_at\": \"2024-11-24T03:23:15.000000Z\",\n                    \"updated_at\": \"2024-11-24T03:23:15.000000Z\",\n                    \"deleted_at\": null\n                }\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/transaction?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/transaction?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/transaction?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/transaction\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/transaction/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"transaction",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/transaction/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"transaction",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Nov 2024 04:37:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=sICWntet4oIuPnaAEigtbeoDX5ORLJjgrGf1lAVF; expires=Sun, 24 Nov 2024 06:37:07 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Get Detail of transaction\",\n    \"data\": {\n        \"id\": 11,\n        \"user_id\": 12,\n        \"listing_id\": 3,\n        \"start_date\": \"2024-03-12\",\n        \"end_date\": \"2024-08-23\",\n        \"price\": 782514,\n        \"total_bulan\": 5,\n        \"fee\": 419024,\n        \"total_price\": 4609260,\n        \"status\": \"waiting\",\n        \"created_at\": \"2024-11-24T04:20:25.000000Z\",\n        \"updated_at\": \"2024-11-24T04:20:25.000000Z\",\n        \"listing\": {\n            \"id\": 3,\n            \"title\": \"Id Magnam\",\n            \"slug\": \"id-magnam\",\n            \"description\": \"Ullam nisi inventore numquam dolorem fugiat beatae. Voluptatibus voluptas accusamus sit voluptas tenetur. Dolorum ex et iure excepturi reiciendis provident. Commodi sapiente delectus aut ipsam assumenda. Vero quia officia facilis quidem. Perferendis ad labore ipsam amet non.\",\n            \"address\": \"507 Hyatt Ridges\\nNorth Leaport, NJ 07010\",\n            \"luas_kamar_m2\": 17,\n            \"kapasitas\": 82,\n            \"price\": 782514,\n            \"attachments\": null,\n            \"full_support_available\": 0,\n            \"mini_canteen_available\": 1,\n            \"created_at\": \"2024-11-24T03:23:15.000000Z\",\n            \"updated_at\": \"2024-11-24T03:23:15.000000Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						},
+						{
+							"name": "error (karena id nya gasesuai dengan yg login)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/transaction/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"transaction",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.9"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Nov 2024 04:37:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "siparus_session=sICWntet4oIuPnaAEigtbeoDX5ORLJjgrGf1lAVF; expires=Sun, 24 Nov 2024 06:37:54 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Transaction not found\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
