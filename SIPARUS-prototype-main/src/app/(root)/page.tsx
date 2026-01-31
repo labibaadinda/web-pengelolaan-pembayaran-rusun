@@ -40,7 +40,7 @@ function Home() {
     <main>
       <section
         id="hero-section"
-        className={`bg-primary-foreground bg-cover lg:bg-contain bg-right bg-no-repeat bg-[url('/images/bg-image.svg')] min-h-[730px] max-h-[745px] xl:max-h-[850px]`}
+        className="relative z-0 min-h-screen bg-[url('/images/bg-image.svg')] bg-cover bg-center"
       >
         <div className="pt-[226px] container mx-auto">
           <div className="max-w-[555px]">
@@ -55,8 +55,12 @@ function Home() {
 
       <section
         id="indicator-section"
-        className="px-10 xl:container xl:mx-auto -mt-16 pb-9"
+        className="relative px-10 xl:container xl:mx-auto mt-12 pb-9"
       >
+
+
+
+
         <div className="h-[128px] flex justify-center xl:justify-between items-center space-x-6 xl:space-x-12 bg-white shadow-indicator rounded-[20px] px-9 py-5 xl:px-[50px] xl:py-[29px]">
           <CardIndicator
             icon="/icons/house-2.svg"
